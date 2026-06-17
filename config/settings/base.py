@@ -144,3 +144,12 @@ REST_FRAMEWORK = {
 
 # --- Custom Auth User Model ---
 AUTH_USER_MODEL = 'workspaces.User'
+
+# --- Cache Configuration ---
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'qostra-core-cache',
+    }
+}
+
