@@ -1,15 +1,6 @@
 import uuid
 from django.db import models
 from django.conf import settings
-from django.contrib.auth.models import AbstractUser
-
-class User(AbstractUser):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-
-    class Meta:
-        verbose_name = "User"
-        verbose_name_plural = "Users"
-
 
 class Workspace(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -70,5 +61,3 @@ class WorkspaceMember(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.role} in {self.workspace.name}"
-
-
