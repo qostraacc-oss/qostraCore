@@ -17,6 +17,7 @@ dependencies = [
     "django-extensions>=4.1",
     "django-ratelimit>=4.1.0",
     "sentry-sdk>=2.63.0",
+    "django-cors-headers>=4.9.0",
 ]
 
 [dependency-groups]
